@@ -80,3 +80,11 @@ body{
 .page_wrapper .list_products li p span{
     color: #2e9629;
 }
+.loader{
+    text-align: center;
+    display: none;
+}
+.loader img{
+    max-width: 100%;
+    margin: 0 auto;
+}

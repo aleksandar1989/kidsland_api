@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="page_wrapper">
-    <img src="http://dev1.smartweb.rs/education/angular/images/logo.png">
+    <img src="{{ asset('/images/logo.png') }}" alt="logo" class="logo"/>
 
     {!! Form::open(['url' => '/', 'id' => 'api_form']) !!}
     <meta name="_token" content="{{ csrf_token() }}" />
@@ -47,7 +47,13 @@
         <p class="desc">{{ $result->ErrorMessage ? $result->ErrorMessage : 'Nema podataka za trаženi proizvod' }}</p>
     @endif
     @endisset
+
 </div>
+
+<div class="loader">
+    <img src="{{ asset('/images/loader.gif') }}"/>
+</div>
+
 <script src="{{ asset('js/jquery.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/custom.js') }}" type="text/javascript"></script>
 </body>
